@@ -2,7 +2,7 @@ import {Server} from "socket.io"
 
 const  io = new Server(9000,{
     cors:{
-        origin:'https://endearing-sable-67eb9d.netlify.app/'
+        origin:'https://soft-ganache-829582.netlify.app/'
     }
 })
 
