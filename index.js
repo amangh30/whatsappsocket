@@ -30,7 +30,7 @@ io.on('connection',(socket)=>{
     
     socket.on('sendMessage',data =>{
         const user = getUser(data.receiverId)
-        io.to(user.socketId).emit('getMessage',data)
+        io.to(user?.socketId).emit('getMessage',data)
     })
 
          //disconnect
