@@ -28,9 +28,10 @@ io.on('connection',(socket)=>{
         io.emit("getUsers",users);
     })
     
-    socket.on('sendMessage',data =>{
+    socket.on('sendMessage',(data) =>{
         const user = getUser(data.receiverId)
         io.to(user.socketId).emit('getMessage',data)
+    })
 
          //disconnect
     socket.on('disconnect', () => {
